@@ -1,0 +1,50 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global body styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header & Footer styles */
+header {
+  background-color: #1976d2;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+/* Main container */
+main {
+  padding: 2rem;
+  min-height: 80vh;
+}
+
+/* Simple form spacing */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Link styling */
+a {
+  color: #1976d2;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

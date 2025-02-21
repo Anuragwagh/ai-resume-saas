@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-jose[cryptography]  # for JWT
+sqlalchemy
+alembic  # for migrations
+psycopg2-binary
+transformers
+torch
+pdfplumber  # for PDF text extraction
+python-multipart  # for file uploads
