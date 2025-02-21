@@ -17,8 +17,11 @@ WORKDIR /app
 COPY --from=builder /usr/local/lib/python3.9/site-packages /usr/local/lib/python3.9/site-packages
 COPY . .
 
-# Clean up unnecessary packages
-RUN apt-get purge -y gcc && apt-get autoremove -y
+# Option 1: Attempt to remove gcc and ignore errors if not found.
+RUN apt-get update && apt-get purge -y gcc && apt-get autoremove -y || true
+
+# Option 2: Alternatively, just comment out the removal step if it's not needed.
+# RUN echo "Skipping removal of gcc as it is not installed in this stage."
 
 EXPOSE 8000
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
